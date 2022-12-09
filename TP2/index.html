@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Atelier Javascript / jQuery</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	</head>
+    <body>
+        <div id="page">
+            <!-- En-Tete de mon Site -->
+            <div class="header">
+                <!-- Image d'illustration -->
+                <!--<img src="img/bandeauduhaut.jpg" alt="Illustration du Haut" />-->
+                <div class="BandeauDuHaut">
+                    <a href="index.html" title="Accueil">
+                        <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAsVBMVEX///8SEhIAAAAAruYODg7u7u719fUjIyMJCQlnZ2eUlJQZGRnq6ur5+fk1NTXi4uKqqqqCgoLc3NzW1tbQ0NCxsbEAquUmJiZAQECVlZV2dnbCwsIeHh4Ar+ZcXFybm5svLy+hoaFhYWFNTU3GxsZERESJiYm4uLit4PXD6fhNv+uDg4NVVVVwcHBJSUkzMzNuyu/j9fxPweyj3fSH0/HS7vp0zO8vt+mT1vLp+f0AAw7YvPE1AAAIzElEQVR4nO2aeX/iNhCGbcU2BmwM5gyw3Mduk5A92qa73/+DVTMj2TIJxx5N01/f55+ALEvzSqPRSMTzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgNfjw8eP7/9tG36CJCOiMzU+DwY3g3effkVn3Ff2K1r6DmaKaJ+u8H5woxl8/gV9RdyXSq6t39s1CHf4u1w0cWtxnUZ4spW68n1f9U938/mGeXetWWeIagF1drXCTEbENa7OJQunJOeS1ulWLir8yAIHv11r1hm+V6E3iqn+ymnBpxYC5Xh6gwXcnm7kosIP4qUfuIPFiDi3as/x3QrnZJyv0qJgzwW+mpd1WjwKZxb3RYXe+6ebwZME00jFcaziV1OYi8Jy2dWNwnW1Slw708hlhZ73yQbSiCoH/qspNG5aL76LQLcNcdLGmTauUVia+NoKb7nDqe1wXyhc2hripLn9mub9eWM5cbsoFEab5e28n3tnEYVptTDqtue3y81zw8NeXz+YFGukVBj2rujMK9x04xpLxFtTkrGT2kga7RYSftWhnDNRuPc6TXnUWro9eF9/03x+Ik299WwWc/szzdqal41r8mY861Ve7dWnprttv6IwDMe+PBjtL0ms8RSNzYhxJGUblNn/bl0nbWsjZAQCLcQaKAobCxWY0VG1rtPDlwHxRB832iTjI4SRs1P2Td3qrPTfcFY+iNUwcxS2VdnZ7IJCXmZBU76wk6oDizY5ijipWHxnmg2MkV1HoW+1S7fOXPB+P/giCn0HU+leCgPT6sK6auZXawd5odC3+vjzw3mFxk17ha1Bs8s6781j3VY8LAdDW0/wXMeJo9A+Mp+KJZXKdv9JFAZ2UjTS6UoVc8qt2twiaSozrWa+1DAtFMoDM6aqkoE9R6Jphz5G1JQOrMOY/IJt5A1T7ehjT0zZ7rMkn/vOKFiF6rEzb9xLv6XvSFLKTupt4uGQLQyGGlbYllZXkyzpio9Ib97aKF815uMpOxplHVZhoKb3s0cjfe2dZcdv8363NyGjUYZ/7kfccascl0gWcTH1dg+dc4DsBSLRLkVO2Qa/y5coDWVVJGkU0YpLYxZlEowumRxwCJiIwJasvrHSU7Ys5zBQbf0l3RiJp3NmabVw0xk5qU432HM5l5NIOizqFUFV3Fc2UrMObRqUyEyY4OW9Y4V/2PeO9sO2O2x2jJd2POOW3VXGZmZFYWDX+eY4Y3mRYWxcI6LxZGHkuYHSViy5xzuq5kwss1I2QtWr2k3w8uWL5KTlseJI4YxbLXc1cg3ycDNMhemR2RFNLC2GRALhhWyD3TQelU5qiuhTq/RFjgiqcytnqcacFXK6Wi/XKmOCl4j4nRQO/jylcMpu1iha3eoO40UqkxNMnxlrFBbKH7jvM2dTwrhpLpGUs3CJpnU9kr50qDnEZcxTNmjyaqsXIyOEbLbJ1Z/KY8ULCsM4qLYa+7IQ+9zz4ZTCIsfpXKPQbPpzXvQmRaV2gsA4qawojrkc5R14ekVhuRYijpfiep/YSW8cEysKxRmPWo21wrYTq19QWOxF1ykUN21NHEPFTTe8GbsbczBtVmAZ9aNekqC04i9W+PGUwkj2x6NWdZq8P1rbP6dQNrqY3DBohmVRvOapVFLLeHwUVvAKheOiPRPg+LM4qXPPdrQOzaYTHrfaVb7dN36BwpS78SvnKF5KsRv22W+KhNylLtYUva5s6NJZt0TSrycVioWd5zZxaljeLHTnP6NQqvmVncUpMueO0E04qK+d3avMfmgzi6V85QPGl8HxBU2qKiaaRKkI95k9iI5l2Iw94ULV9j+hsFfKeVZUnh1FtLrnZCXtL4rrHZvTjGgssrFJJ9nBnKzbUm5oOVVZi5IxR8dwHttpy0wzDRKzHyqd6m57P6zQs6l6edhPhzatLdZXWrM58mi9oLhuH9m8VCfeTZt6S4bzVRKar25fMgIqmLV4mnOTeKlge5hSjm3P3rdF4u2bHJs2pB9VaH3SCfnj50W5sV6Hc5Fvjo2i0Gwm5i2J8x+crNtivCNQsWSDE3ski2OTcu6rA1e0SQP6owptr83y+GmOcpX7hmzqnssC9ZiVpjS3ynlyL29J1v1XtbNxuSa6IrHa6n2Ziyq3nP3rRxWmQ7rjiytnSS6pFnnpLjbmkPfYCFjnC8KsYx7pKjYJP8q6S8tNRWkhHKuy1di5ApmMyvKmlEdT7sxRSF8vK/R2i5ZmuHGKOlxU21Qrhu2VuadZFr2MqeYi83pjuTkpnvzxRDz/uaL3YCra2cqWa2l11q/ugJuOXNTct22KMHrUnU2LWmz48Mp7vqtJw/DUZWAUnj+qlRWT44r61fTFqqd7AwD8s8wu3Ez8Z8i8NDehN8l1RAl5i82iRM2TyBRmqZcmXpjYOl7KlShW0euv/ZP395GoO9oLdBBNtvxLeUZ72923hLaIWy856D9znRhs1E7v+NlI8V674YuIlj4EqIbvXL6/RRI17epsUNs6fEh1dtPT1ucTuqT4Rrt4bZ142aNW2FOjPE1VPdJ12vobKdzqnFHpk0+0Ui9vM2+ChJPQzkELS/R+OJ55XqPGqTDN5YZzl5wV5nRCpVcaC1chZU/Rtb/s/RsknJo2ttr6b/a/BRSfnUnhnpWkrDCk/IUeTFQqCg+kkFOuox+73hQJXwJphZviZLpaT2liSGHGs9lmhTrC9FkYzyElRFNSSKfJNz6HRqH3uM706Zku2cIuFTY7XqLz6t3kTtk5jFQ9SWkdRmocRTvF63CShm98HZLCnfbLkHLvmXbAHt2DhNpD1aP200PtIedYSrOWtSSW0oFLrQ42li7eciylvc6Trc5Lugn9BxmXaj1hN/U45Z5odanZ9LKuTFfazXg/1Oswf9P6LjE8tCdL557yGZd+k3nzJLtta3suULZ6Zx4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4n/E3jAV9kxeceFYAAAAASUVORK5CYII=" alt="Logo WEBITECH" />
+                    </a>
+                </div>
+                <!-- Menu du Haut -->
+                <ul>
+                    <li>
+                        <a href="index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#">Présentation</a>
+                    </li>
+                    <li class="current">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contenu de mon Site -->
+            <div id="contenu">
+                <!-- Titre HTML -->
+                <h1>Rechercher un Contact</h1>
+                
+                <div class="contenu-page">
+                    <form>
+                        <input type="text" id="search" placeholder="Rechercher un Contact...">
+                    </form>
+                    <div class="resultat">
+                        
+<!--
+                        <div class="membre">
+                            <div class="membre_informations">
+                                <p>Nom Complet :</p>
+                                <p>Username :</p>
+                                <p>Email :</p>
+                                <p>Téléphone :</p>
+                            </div>
+                        </div>
+-->
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Div servant à délimiter mon Pied de Page -->
+            <div id="footer">
+                <!-- Google Map -->
+                <div class="gmap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10505.371207156275!2d2.2901581!3d48.8325996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x26a7ba95152fa72b!2sWebitech%2C%20la%20Grande%20%C3%89cole%20de%20l&#39;Informatique%20%C3%A0%20Paris!5e0!3m2!1sfr!2sfr!4v1670422535215!5m2!1sfr!2sfr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- Formulaire Newsletter -->
+                <div class="newsletter">
+                    <form>
+                        <fieldset>
+                            <legend>Newsletter</legend>
+                            <input type="email" name="email" placeholder="Adresse Email" />
+                            <input type="text" name="nom" placeholder="Nom" />
+                            <input type="text" name="prenom" placeholder="Prénom" />
+                            <input type="submit" value="M'inscrire !" />
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- Contact -->
+                <div class="contact">
+                    <h3>Contactez-nous</h3>
+                    <address>
+                        <strong>WEBITECH</strong> <br />
+                        <a href="tel:0142037700" title="Téléphone"><i class="fa fa-phone" aria-hidden="true"></i> 01 42 03 77 00</a><br />
+                        <a href="mailto:contact@webitech.com" title="Adresse Email"><i class="fa fa-envelope" aria-hidden="true"></i> contact@webitech.com</a><br />
+                        6-8 Rue Firmin Gillot,<br />
+                        75015 Paris <br />
+                        FRANCE
+                    </address>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Intégration de jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Intégration de lodash -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Intégration de mon script -->
+        <script src="js/recherche-contact.js"></script>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
