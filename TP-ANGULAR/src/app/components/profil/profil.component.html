@@ -1,0 +1,15 @@
+
+<!-- PROFIL D'UN UTILISATEUR -->
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5" *ngIf="!contactProfil">
+    <h1 class="display-5 fw-bold name">Bienvenue !</h1>
+    <p class="col-md-8 fs-4 username">Choisissez un contact.</p>
+  </div>
+  <div class="container-fluid py-5" *ngIf="contactProfil">
+    <h1 class="display-5 fw-bold name">{{ contactProfil.name }}</h1>
+    <p class="col-md-8 fs-4 username">{{ contactProfil.username }}</p>
+    <hr>
+    <input type="text" class="form-control"
+           [(ngModel)]="contactProfil.name">
+  </div>
+</div> <!-- /.jumbotron -->

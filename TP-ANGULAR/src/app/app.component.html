@@ -1,0 +1,48 @@
+<div class="container">
+  <header class="mb-4">
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">
+          {{ title }}
+        </span>
+      </div>
+    </nav>
+  </header> <!-- /.header -->
+
+  <div class="row">
+    <div class="col-sm-4">
+
+      <!-- Liste des contacts de l'application -->
+
+      <!-- NE DOIT APPARAITRE QUE S'IL N'Y A PAS DE CONTACT -->
+      <div class="alert alert-info" style="display: none;">
+        <i class="fa-solid fa-address-book"></i>
+        Vous n'avez pas de contact pour le moment.
+      </div>
+
+      <ul class="list-group">
+        <a *ngFor="let contact of contacts"
+           (click)="displayContact(contact)"
+           [class.active]="contactActif === contact"
+           class="list-group-item d-flex justify-content-between align-items-center"
+           href="javascript:void(0)" aria-current="true">
+          {{ contact.name }}
+          <button class="btn btn-outline-danger">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </a>
+      </ul><!-- /.list-group -->
+
+      <!--<pre>
+        {{ contacts | json }}
+      </pre>-->
+
+      <app-add-contact></app-add-contact>
+
+    </div> <!-- /.col-sm-4 -->
+    <div class="col-sm-8">
+      <app-profil [contactProfil]="contactActif"></app-profil>
+    </div> <!-- /.col-sm-8 -->
+  </div> <!-- /.row -->
+
+</div> <!-- /.container -->
