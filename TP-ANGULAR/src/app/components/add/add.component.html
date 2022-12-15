@@ -1,11 +1,25 @@
 <!-- AJOUTER UN UTILISATEUR -->
-<form id="contact" class="needs-validation" novalidate>
+<form #form="ngForm" (ngSubmit)="createContact(); form.reset();">
 
   <h5 class="text-center m-4">Ajouter un contact</h5>
 
+  <!--<pre>
+    {{ 'Notre formulaire est valide : ' + form.valid }}
+    {{ 'Le champ (nom complet) est valide : ' + name.valid }}
+    {{ 'Le champ (nom complet) est invalide : ' + name.invalid }}
+    {{ 'Le champ (nom complet) a été touché : ' + name.touched }}
+    {{ 'Le champ (nom complet) n\'a pas été touché : ' + name.untouched }}
+    {{ 'Le champ (nom complet) est pristine : ' + name.pristine }}
+
+    {{ nouveauContact | json }}
+  </pre>-->
+
   <div class="mb-3">
     <input class="form-control" type="text"
-           name="name" required
+           [(ngModel)]="nouveauContact.name"
+           name="name" required #name="ngModel"
+           [class.is-invalid]="name.invalid && name.touched"
+           [class.is-valid]="name.valid && name.touched"
            placeholder="Saisissez votre nom complet">
     <div class="invalid-feedback">
       N'oubliez pas de saisir un nom complet
@@ -14,7 +28,10 @@
 
   <div class="mb-3">
     <input class="form-control" type="text"
-           name="username" required
+           name="username" required #username="ngModel"
+           [(ngModel)]="nouveauContact.username"
+           [class.is-invalid]="username.invalid && username.touched"
+           [class.is-valid]="username.valid && username.touched"
            placeholder="Saisissez votre pseudo">
     <div class="invalid-feedback">
       N'oubliez pas de saisir un pseudo
@@ -23,7 +40,10 @@
 
   <div class="mb-3">
     <input class="form-control" type="text"
-           name="email" required
+           name="email" required #email="ngModel"
+           [(ngModel)]="nouveauContact.email"
+           [class.is-invalid]="email.invalid && email.touched"
+           [class.is-valid]="email.valid && email.touched"
            placeholder="Saisissez votre e-mail">
     <div class="invalid-feedback">
       N'oubliez pas de saisir un e-mail
@@ -31,7 +51,7 @@
   </div>
 
   <div class="d-grid gap-2">
-    <button class="btn btn-dark">Ajouter le contact</button>
+    <button [disabled]="form.invalid" class="btn btn-dark">Ajouter le contact</button>
   </div>
 
 </form>

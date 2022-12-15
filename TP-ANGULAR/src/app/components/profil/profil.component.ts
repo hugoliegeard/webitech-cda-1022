@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Contact} from "../../models/contact";
 
 @Component({
   selector: 'app-profil',
@@ -6,5 +7,5 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent {
-  @Input() contactProfil: any;
+  @Input() contactProfil: Contact;
 }
